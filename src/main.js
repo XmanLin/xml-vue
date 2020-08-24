@@ -3,9 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// import echarts from 'echarts'
+// Vue.prototype.$echarts = echarts
 
+let echarts = require('echarts/lib/echarts')
+
+require('echarts/lib/chart/line')
+
+require('echarts/lib/component/tooltip')
+require('echarts/lib/component/title')
+
+Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
